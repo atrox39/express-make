@@ -6,14 +6,16 @@ const path = require('path');
 // Globals
 const pName = process.argv.splice(2,1)[0];
 
-const message = fs.readFileSync('./console.txt'); // Message console
-const index = fs.readFileSync('./template/index.js'); // index.js
+const CURRENT = process.cwd();
+
+const message = fs.readFileSync(path.join(__dirname, 'console.txt')); // Message console
+const index = fs.readFileSync(path.join(__dirname, 'template', 'index.js')); // index.js
 
 console.log(Buffer.from(message).toString('utf8')+"\n\n");
 
 // Creating files
 
-const current_path = path.join(__dirname, pName);
+const current_path = path.join(CURRENT, pName);
 const packagePath = path.join(current_path, 'package.json');
 const publicPath = path.join(current_path, 'public');
 const viewsPath = path.join(current_path, 'views');
