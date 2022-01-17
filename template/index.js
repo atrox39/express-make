@@ -1,4 +1,4 @@
-const hbs = require('express-handlebars');
+const handlebars = require('express-handlebars');
 const express = require('express');
 const morgan = require('morgan');
 const session = require('express-session');
@@ -27,7 +27,7 @@ app.use(session({
 
 // HANDLEBARS CONFIG
 app.set('views', 'views');
-app.engine('hbs', handlebars({
+app.engine('hbs', handlebars.engine({
     defaultLayout: 'main',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     extname: '.hbs',

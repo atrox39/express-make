@@ -3,11 +3,11 @@ Simple Express Framework CLI
 
 Create the project with
 
-database\models | Only Dir
-views | Only Dir
-public | Only Dir
-routes | Only Dir
-index.js | Express Server with configs
+- database\models | Only Dir
+- views | Only Dir
+- public | Only Dir
+- routes | Only Dir
+- index.js | Express Server with configs
 
 Installation
 
